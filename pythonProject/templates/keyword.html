@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Feel to Music</title>
+  </head>
+<body>
+    <div class="navbar navbar-dark bg-success shadow-sm">
+      <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <strong>Feel to Music</strong>
+        </a>
+      </div>
+    </div>
+    <section class="py-5 text-center container">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Feel to Music Application</h1>
+        </div>
+    </section>
+
+    <section class="py-5 text-center container">
+        <table class="table" style="table-layout: fixed" width="100%">
+            <thead>
+                <tr>
+                    <th scope="col" width="5%">#</th>
+                    <th scope="col" width="10%">순위</th>
+                    <th scope="col" width="10%">제목</th>
+                    <th scope="col" width="10%">가수</th>
+                    <th scope="col" width="10%">앨범</th>
+                    <th scope="col" width="10%">장르</th>
+                    <th scope="col" width="50%">가사</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for i in range(5) %}
+                <tr>
+                    <th scope="row">{{ i+1 }}</th>
+                    <td>{{ result['id'][i] }}</td>
+                    <td>{{ result['title'][i] }}</td>
+                    <td>{{ result['artist'][i] }}</td>
+                    <td>{{ result['album'][i] }}</td>
+                    <td>{{ result['genre'][i] }}</td>
+                    <td style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap; ">
+                        <nobr>{{ result['lyric'][i] }}</nobr>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

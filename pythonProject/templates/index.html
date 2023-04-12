@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Feel to Music</title>
+  </head>
+  <body>
+    <div class="navbar navbar-dark bg-success shadow-sm">
+      <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <strong>Feel to Music</strong>
+        </a>
+      </div>
+    </div>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Feel to Music Application</h1>
+          <br>
+          <p class="lead text-muted">
+          Feel to Music Application
+          </p>
+          <p>페이지에 오신 것을 환영합니다
+          </p>
+          <br>
+          <br>
+          <form action='http://175.215.153.210:9900/keyword' method="POST">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="기분이나 상태를 키워드로 입력해주세요!" aria-label="기분이나 상태를 키워드로 입력해주세요!" aria-describedby="button-addon2", name="keyword">
+              <button class="btn btn-outline-secondary bg-success shadow-sm" type="submit" id="button-addon2" style="color:white;" onclick="keyword()" name="keyword">submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
